@@ -65,13 +65,15 @@ void loop() // run over and over
 void checkmessage()
 {
   
-    mySerial.print("AT+CMGF=1");
-  mySerial.print("\r");
-  delay(500);
+   mySerial.print("AT+CMGF=1");
+   mySerial.print("\r");
+   delay(500);
   
- Serial.write(inChar);
+   Serial.write(inChar);
 
   mySerial.print("AT+CMGL=ALL");
+  mySerial.print("\r"); 
+
 
   
 }
